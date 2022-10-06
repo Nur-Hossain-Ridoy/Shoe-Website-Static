@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Website Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- font awesome icon link  -->
+    <script
+      src="https://kit.fontawesome.com/2eb4f4e916.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- --------------icon or image logo----------  -->
+    <link rel="icon" href="./assets/icon.jpeg" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="hero-img"></div>
+    <!-- ------------------ header section -------------------  -->
+    <header>
+      <a href="">Shoe<span>Brand</span></a>
+      <i class="fas fa-bars show-menu"></i>
+
+      <nav class="nav-menu">
+        <i class="fas fa-times-circle close-menu"></i>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sneakers</a></li>
+          <li><a href="#">Playground</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ----------------------- hero title section ---------------------  -->
+    <section class="left-title">
+      <h1>Regain Your Confidence Again</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam
+        nam nulla eos obcaecati assumenda, architecto harum placeat velit quae
+        non debitis porro dolore cum laborum tempore perspiciatis provident
+        molestiae.
+      </p>
+      <i class="fas fa-long-arrow-alt-down down-arrow"></i>
+    </section>
+
+    <!-- ----------------------- middle section ----------------------  -->
+    <section class="feature">
+      <!-- ------ first column ------- -->
+      <div class="feature-col">
+        <div class="feature-title">
+          <h3>Light Weight</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab veniam
+            at voluptatem eveniet delectus, et odit. Tenetur distinctio illo
+            culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Soluta, repudiandae.
+          </p>
+        </div>
+        <img src="./assets/basketball.png" alt="basketball" />
+      </div>
+
+      <!-- ------ second column ------- -->
+      <div class="feature-col flip">
+        <div class="feature-title">
+          <h3>Light Weight</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab veniam
+            at voluptatem eveniet delectus, et odit. Tenetur distinctio illo
+            culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Soluta, repudiandae.
+          </p>
+        </div>
+        <img src="./assets/basketball.png" alt="basketball" />
+      </div>
+
+      <!-- ------ third column ------- -->
+      <div class="feature-col">
+        <div class="feature-title">
+          <h3>Light Weight</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab veniam
+            at voluptatem eveniet delectus, et odit. Tenetur distinctio illo
+            culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Soluta, repudiandae.
+          </p>
+        </div>
+        <img src="./assets/basketball.png" alt="basketball" />
+      </div>
+    </section>
+  </body>
+  <script>
+    let openMenu = document.querySelector(".show-menu");
+    let closeMenu = document.querySelector(".close-menu");
+    let navMenu = document.querySelector(".nav-menu");
+
+    openMenu.addEventListener("click", () => {
+      navMenu.classList.add("open-menu");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      navMenu.classList.remove("open-menu");
+    });
+  </script>
+</html>

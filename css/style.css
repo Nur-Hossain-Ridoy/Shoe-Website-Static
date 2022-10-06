@@ -1,0 +1,329 @@
+/*! ----------------- reseting all default margin padding ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  margin: 1.5em;
+}
+
+/*! ----------------- hero-image ------------------ */
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../assets/nike-shoe.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  -webkit-animation: heroImage 2s ease-in-out;
+          animation: heroImage 2s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+header a {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/*! -------------------- navigation style for mobile first ----------------------- */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  width: 50%;
+  height: 100vh;
+  -webkit-transition: 2s;
+  transition: 2s;
+  z-index: 999;
+}
+
+header nav ul {
+  position: absolute;
+  top: 30%;
+  margin-left: 1rem;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #000;
+  display: block;
+  padding: 0.75em;
+}
+
+header nav ul li a:hover {
+  background: #f3f3f3;
+}
+
+header nav .close-menu {
+  font-size: 19px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  margin: 3em;
+}
+
+header .show-menu {
+  color: #fff;
+  font-size: 1.3em;
+}
+
+header .open-menu {
+  display: block;
+}
+
+/*! ----------------- left title section ------------- */
+.left-title {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  -webkit-animation: leftTitle 3s;
+          animation: leftTitle 3s;
+}
+
+.left-title h1 {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.left-title p {
+  text-align: justify;
+  margin-top: 3em;
+  line-height: 1.6;
+}
+
+.left-title .down-arrow {
+  position: absolute;
+  bottom: 3em;
+  left: 1em;
+  font-size: 2em;
+  animation: downArrow 1s infinite alternate-reverse;
+}
+
+/*! -------------------- feature section ------------------- */
+section.feature .feature-col {
+  text-align: center;
+  padding: 2em;
+}
+
+section.feature .feature-col h3 {
+  margin-bottom: 1em;
+}
+
+section.feature .feature-col p {
+  text-align: justify;
+}
+
+section.feature .feature-col img {
+  margin-top: 2em;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*! ------------------- media query start from here ------------------ */
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 2em 4em;
+  }
+  .left-title h1 {
+    font-size: 2.5rem;
+  }
+  .left-title .down-arrow {
+    left: 2em;
+    bottom: 3em;
+  }
+}
+
+/*! ---------------- this is for 920px media query --------------------- */
+@media only screen and (min-width: 920px) {
+  header a {
+    color: #000;
+  }
+  header a span {
+    color: red;
+  }
+  .hero-img {
+    width: 50%;
+    left: unset;
+    right: 0;
+    height: 90vh;
+  }
+  .left-title {
+    color: #000;
+    width: 45%;
+    height: 80vh;
+  }
+  .left-title .down-arrow {
+    bottom: 2.5em;
+    left: 2.5em;
+  }
+  header .show-menu {
+    display: none;
+  }
+  header nav {
+    display: block;
+    background: none;
+    position: unset;
+    height: auto;
+    width: unset;
+  }
+  header nav ul {
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav ul li a {
+    color: #fff;
+    font-weight: normal;
+  }
+  header nav .close-menu {
+    display: none;
+  }
+  section.feature .feature-col {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    gap: 2em;
+  }
+  section.feature .feature-col .feature-title {
+    width: 80%;
+  }
+  section.feature .feature-col p {
+    line-height: 1.3;
+  }
+  section.feature .feature-col img {
+    margin-top: 0;
+  }
+  section.feature .feature-col.flip {
+        grid-template-areas: "left right";
+    gap: 2em;
+  }
+  section.feature .feature-col.flip .feature-title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: right;
+    margin-left: 12em;
+    padding-right: 3em;
+  }
+  section.feature .feature-col.flip img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    margin: 3em 10em;
+  }
+  .left-title .down-arrow {
+    left: 5em;
+  }
+}
+
+/*! --------------- down arrow animation --------------- */
+@-webkit-keyframes downArrow {
+  from {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes downArrow {
+  from {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*! --------------- hero image animation --------------- */
+@-webkit-keyframes heroImage {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes heroImage {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/*! --------------- left title animation --------------- */
+@-webkit-keyframes leftTitle {
+  from {
+    -webkit-transform: translateY(-120px);
+            transform: translateY(-120px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes leftTitle {
+  from {
+    -webkit-transform: translateY(-120px);
+            transform: translateY(-120px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
